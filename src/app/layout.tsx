@@ -22,10 +22,6 @@ export const metadata: Metadata = {
         "NoPromil kişisel alkol alkolmetre ile saniyeler içinde ölçüm yapın, bilinçli karar verin ve güvende kalın.",
     applicationName: "NoPromil",
     metadataBase: new URL("https://www.nopromil.com"),
-    icons: {
-        icon: [{ url: "/icon.png" }],
-        apple: [{ url: "/apple-icon.png" }],
-    },
     openGraph: {
         type: "website",
         title: "NoPromil | Kişisel Alkol Analizörü",
@@ -51,7 +47,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="tr">
-        <body>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
 
         <Script
