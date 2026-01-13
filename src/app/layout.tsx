@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
         template: "%s | NoPromil",
     },
     description:
-        "NoPromil kişisel alkol analizörü ile saniyeler içinde ölçüm yapın, bilinçli karar verin ve güvende kalın.",
+        "NoPromil kişisel alkol alkolmetre ile saniyeler içinde ölçüm yapın, bilinçli karar verin ve güvende kalın.",
     applicationName: "NoPromil",
     metadataBase: new URL("https://www.nopromil.com"),
     icons: {
@@ -48,13 +49,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    return (
+        <html lang="tr">
+        <body>
         {children}
-      </body>
-    </html>
-  );
+
+        <Script
+            src="https://www.googletagmanager.com/gtag/js?id=AW-17872043633"
+            strategy="afterInteractive"
+        />
+        <Script
+            id="google-ads-gtag"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+                __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17872043633');
+            `,
+            }}
+        />
+        </body>
+        </html>
+    );
 }
