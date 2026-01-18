@@ -27,10 +27,20 @@ export default function Page() {
 
                     <div className="mt-8 flex flex-wrap gap-3">
                       <a
-                          href="#product"
-                          className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-medium text-black transition hover:opacity-90"
+                          href="https://www.trendyol.com/nopromil/alkolmetre-dijital-ve-tasinabilir-promil-olcum-cihazi-p-1079522446?boutiqueId=61&merchantId=158056"
+                          target="_blank"
+                          className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#F27A1A] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:brightness-110 hover:scale-x-95  active:brightness-95 group"
                       >
-                        Ürünü İncele
+                        <span>Trendyol’da Satın Al</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                              d="M7 17L17 7M17 7H9M17 7V15"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                          />
+                        </svg>
                       </a>
                       <a
                           href="#contact"
